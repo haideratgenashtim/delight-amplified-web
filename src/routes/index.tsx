@@ -246,17 +246,6 @@ function Home() {
         </div>
       </section>
 
-      {/* MARQUEE */}
-      <section className="py-10 border-y border-border/60 overflow-hidden">
-        <div className="text-center pb-6 text-xs tracking-[0.25em] text-gold uppercase">Faces of the movement</div>
-        <div className="fade-edge-x">
-          <div className="marquee">
-            {[...facesRow, ...facesRow].map((src, i) => (
-              <img key={i} src={src} alt="" loading="lazy" className="h-32 w-44 object-cover rounded-xl ring-1 ring-border/70 shrink-0" />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section id="cta" className="mx-auto max-w-7xl px-5 sm:px-8 py-24">
