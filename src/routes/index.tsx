@@ -18,6 +18,17 @@ import vendor3 from "@/assets/vendor-3.jpg";
 import leadership from "@/assets/leadership.jpg";
 import craft from "@/assets/craft.jpg";
 
+import upOurStory from "@/assets/up-our-story.jpg";
+import upOurStory2 from "@/assets/up-our-story-2.jpg";
+import upShoppers from "@/assets/up-shoppers.jpg";
+import upShoppers2 from "@/assets/up-shoppers-2.jpg";
+import upParallax1 from "@/assets/up-parallax-1.jpg";
+import upParallax2 from "@/assets/up-parallax-2.jpg";
+import upParallax3 from "@/assets/up-parallax-3.jpg";
+import upParallax4 from "@/assets/up-parallax-4.jpg";
+import upBanner1 from "@/assets/up-banner-1.jpg";
+import upBanner2 from "@/assets/up-banner-2.jpg";
+
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import scanVideo from "@/assets/scan-video.mp4.asset.json";
 import communityVideo from "@/assets/community-video.mp4.asset.json";
@@ -102,7 +113,7 @@ function Home() {
             tag="For shoppers"
             title="Scan. Earn. Redeem."
             href="Explore the shopper app"
-            image={vendor3}
+            image={upShoppers2}
             steps={[
               { icon: QrCode, title: "Scan the seal", body: "Verify a merchant's certification with a single tap." },
               { icon: Coins, title: "Earn points & tokens", body: "Every purchase rewards you — in points or digital tokens." },
@@ -113,7 +124,7 @@ function Home() {
             tag="For merchants"
             title="Join. Onboard. Grow."
             href="See merchant benefits"
-            image={hero1}
+            image={upOurStory}
             steps={[
               { icon: Heart, title: "Apply with heart", body: "Tell us what makes your business honourable." },
               { icon: BadgeCheck, title: "Get certified", body: "A clear, narrative assessment — not a checklist." },
@@ -151,7 +162,7 @@ function Home() {
       {/* FACES GRID */}
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-24">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {[vendor1, vendor2, vendor3, leadership, craft, hero2].map((src, i) => (
+          {[upShoppers, upParallax1, upParallax3, upBanner2, upOurStory2, upParallax2].map((src, i) => (
             <figure key={i} className="relative overflow-hidden rounded-2xl aspect-[4/5] ring-1 ring-border/70 group">
               <img src={src} alt="A happy merchant or customer" loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent opacity-0 group-hover:opacity-100 transition" />
@@ -190,8 +201,8 @@ function Home() {
             <div className="relative overflow-hidden rounded-3xl ring-1 ring-border/70 col-span-2">
               <video src={scanVideo.url} autoPlay muted loop playsInline className="h-72 w-full object-cover" />
             </div>
-            <img src={scanImg} alt="Scanning a merchant seal" loading="lazy" className="h-56 w-full object-cover rounded-3xl ring-1 ring-border/70" />
-            <img src={hero2} alt="Happy customer" loading="lazy" className="h-56 w-full object-cover rounded-3xl ring-1 ring-border/70" />
+            <img src={upBanner1} alt="Joyful shoppers at an honourable merchant" loading="lazy" className="h-56 w-full object-cover rounded-3xl ring-1 ring-border/70" />
+            <img src={upParallax4} alt="Happy customers with a merchant" loading="lazy" className="h-56 w-full object-cover rounded-3xl ring-1 ring-border/70" />
           </div>
         </div>
       </section>
@@ -229,7 +240,7 @@ function Home() {
               merchants, and stewards alike. A standard kept honest because it belongs to everyone.
             </p>
             <a href="#" className="btn-gold mt-7">How governance works <ArrowRight className="h-4 w-4" /></a>
-            <img src={leadership} alt="Community leadership" loading="lazy" className="mt-10 rounded-3xl ring-1 ring-border/70 h-80 w-full object-cover" />
+            <img src={upOurStory2} alt="Community leadership" loading="lazy" className="mt-10 rounded-3xl ring-1 ring-border/70 h-80 w-full object-cover" />
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             {governance.map((g, i) => (
@@ -316,10 +327,10 @@ function Wallet() {
 }
 
 const benefits = [
-  { icon: Heart, title: "Shop with feeling", body: "Find places that match your values, near you.", image: vendor1 },
-  { icon: Coins, title: "Earn as you go", body: "Points and tokens for everyday purchases.", image: vendor2 },
-  { icon: QrCode, title: "Verified, instantly", body: "QR scan reveals the merchant's status in a beat.", image: scanImg },
-  { icon: Users, title: "Own the standard", body: "Token holders shape how the movement grows.", image: leadership },
+  { icon: Heart, title: "Shop with feeling", body: "Find places that match your values, near you.", image: upParallax3 },
+  { icon: Coins, title: "Earn as you go", body: "Points and tokens for everyday purchases.", image: upBanner2 },
+  { icon: QrCode, title: "Verified, instantly", body: "QR scan reveals the merchant's status in a beat.", image: upParallax1 },
+  { icon: Users, title: "Own the standard", body: "Token holders shape how the movement grows.", image: upParallax2 },
 ];
 
 const governance = [
