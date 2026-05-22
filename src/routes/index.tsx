@@ -30,6 +30,11 @@ import upBanner1 from "@/assets/up-banner-1.jpg";
 import upBanner2 from "@/assets/up-banner-2.jpg";
 import upBanner3 from "@/assets/up-banner-3.jpg";
 import upBanner4 from "@/assets/up-banner-4.jpg";
+import benefit1 from "@/assets/benefit-1.jpg";
+import benefit2 from "@/assets/benefit-2.jpg";
+import benefit3 from "@/assets/benefit-3.jpg";
+import benefit4 from "@/assets/benefit-4.jpg";
+import governance1 from "@/assets/governance-1.jpg";
 
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import scanVideo from "@/assets/scan-video.mp4.asset.json";
@@ -242,7 +247,7 @@ function Home() {
               merchants, and stewards alike. A standard kept honest because it belongs to everyone.
             </p>
             <a href="#" className="btn-gold mt-7">How governance works <ArrowRight className="h-4 w-4" /></a>
-            <img src={upOurStory2} alt="Community leadership" loading="lazy" className="mt-10 rounded-3xl ring-1 ring-border/70 h-80 w-full object-cover" />
+            <img src={governance1} alt="Community leadership" loading="lazy" className="mt-10 rounded-3xl ring-1 ring-border/70 h-80 w-full object-cover" />
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             {governance.map((g, i) => (
@@ -329,10 +334,10 @@ function Wallet() {
 }
 
 const benefits = [
-  { icon: Heart, title: "Shop with feeling", body: "Find places that match your values, near you.", image: upParallax3 },
-  { icon: Coins, title: "Earn as you go", body: "Points and tokens for everyday purchases.", image: upBanner2 },
-  { icon: QrCode, title: "Verified, instantly", body: "QR scan reveals the merchant's status in a beat.", image: upParallax1 },
-  { icon: Users, title: "Own the standard", body: "Token holders shape how the movement grows.", image: upParallax2 },
+  { icon: Heart, title: "Shop with feeling", body: "Find places that match your values, near you.", image: benefit1 },
+  { icon: Coins, title: "Earn as you go", body: "Points and tokens for everyday purchases.", image: benefit2 },
+  { icon: QrCode, title: "Verified, instantly", body: "QR scan reveals the merchant's status in a beat.", image: benefit3 },
+  { icon: Users, title: "Own the standard", body: "Token holders shape how the movement grows.", image: benefit4 },
 ];
 
 const governance = [
