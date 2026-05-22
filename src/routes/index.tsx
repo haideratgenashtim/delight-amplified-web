@@ -28,6 +28,8 @@ import upParallax3 from "@/assets/up-parallax-3.jpg";
 import upParallax4 from "@/assets/up-parallax-4.jpg";
 import upBanner1 from "@/assets/up-banner-1.jpg";
 import upBanner2 from "@/assets/up-banner-2.jpg";
+import upBanner3 from "@/assets/up-banner-3.jpg";
+import upBanner4 from "@/assets/up-banner-4.jpg";
 
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import scanVideo from "@/assets/scan-video.mp4.asset.json";
@@ -162,7 +164,7 @@ function Home() {
       {/* FACES GRID */}
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-24">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {[upShoppers, upParallax1, upParallax3, upBanner2, upOurStory2, upParallax2].map((src, i) => (
+          {[upBanner3, upShoppers, upParallax1, upBanner4, upParallax3, upOurStory2].map((src, i) => (
             <figure key={i} className="relative overflow-hidden rounded-2xl aspect-[4/5] ring-1 ring-border/70 group">
               <img src={src} alt="A happy merchant or customer" loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent opacity-0 group-hover:opacity-100 transition" />
