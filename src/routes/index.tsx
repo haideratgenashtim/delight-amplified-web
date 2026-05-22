@@ -71,11 +71,6 @@ function Home() {
             <a href="#how" className="btn-ghost"><PlayCircle className="h-4 w-4 text-gold" /> See how it works</a>
           </div>
 
-          <div className="mt-10 mx-auto max-w-3xl rounded-2xl border border-border/70 bg-card/60 backdrop-blur px-5 py-4 flex flex-wrap items-center justify-around gap-4 text-sm">
-            <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-gold" /> Independently certified</span>
-            <span className="inline-flex items-center gap-2"><Heart className="h-4 w-4 text-gold" /> Owned by its community</span>
-            <span className="inline-flex items-center gap-2"><Star className="h-4 w-4 text-gold" /> 4.9 average shopper love</span>
-          </div>
         </div>
 
         {/* hero image collage */}
