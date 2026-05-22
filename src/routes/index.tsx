@@ -68,7 +68,6 @@ function Home() {
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
             <a href="#cta" className="btn-gold"><Smartphone className="h-4 w-4" /> Download the app <ArrowRight className="h-4 w-4" /></a>
-            <a href="#find" className="btn-ghost"><MapPin className="h-4 w-4" /> Find a merchant</a>
             <a href="#how" className="btn-ghost"><PlayCircle className="h-4 w-4 text-gold" /> See how it works</a>
           </div>
 
