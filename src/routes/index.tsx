@@ -46,7 +46,7 @@ export const Route = createFileRoute("/")({
       { title: "Honourable Merchant — Make every purchase count." },
       { name: "description", content: "Discover honourable shops near you. Scan to verify. Earn points and tokens with every visit. A community-owned standard for trade done with care." },
       { property: "og:title", content: "Honourable Merchant" },
-      { property: "og:description", content: "A movement, not a marketplace." },
+      { property: "og:description", content: "SHOP WITH CONFIDENCE." },
     ],
   }),
   component: Home,
@@ -73,15 +73,14 @@ function Home() {
         </div>
 
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-16 pb-10 text-center">
-          <span className="pill"><Sparkles className="h-3.5 w-3.5" /> A movement, not a marketplace</span>
+          <span className="pill"><Sparkles className="h-3.5 w-3.5" /> SHOP WITH CONFIDENCE.</span>
           <h1 className="mt-8 font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] leading-[1.02] font-medium">
             Make every
             <br className="hidden sm:block" />{" "}
             <span className="italic-gold">purchase count.</span>
           </h1>
           <p className="mt-7 mx-auto max-w-2xl text-lg text-muted-foreground">
-            Discover honourable shops near you. Scan to verify. Earn points and tokens with
-            every visit. And help own the standard you trust.
+            The Honourable Merchant is a mark of trust that certain standards are met for how people are treated and the environment is considered. 
           </p>
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
@@ -153,7 +152,7 @@ function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-8 md:p-12 text-white">
-              <span className="pill !text-gold-soft !border-gold-soft/60">A movement of people</span>
+              <span className="pill !text-gold-soft !border-gold-soft/60">SHOP WITH CONFIDENCE </span>
               <h2 className="mt-4 font-serif text-3xl md:text-5xl max-w-2xl">
                 Real shops. Real people. <span className="italic-gold">Real trust.</span>
               </h2>
