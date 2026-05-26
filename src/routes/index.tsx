@@ -35,6 +35,7 @@ import benefit2 from "@/assets/benefit-2.jpg";
 import benefit3 from "@/assets/benefit-3.jpg";
 import benefit4 from "@/assets/benefit-4.jpg";
 import governance1 from "@/assets/governance-1.jpg";
+import bcorpLogo from "@/assets/bcorp-logo.png";
 
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import scanVideo from "@/assets/scan-video.mp4.asset.json";
