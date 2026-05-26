@@ -267,7 +267,7 @@ function Home() {
               merchants, and stewards alike. A standard kept honest because it belongs to everyone.
             </p>
             <a href="#" className="btn-gold mt-7">How governance works <ArrowRight className="h-4 w-4" /></a>
-            <img src={governance1} alt="Community leadership" loading="lazy" className="mt-10 rounded-3xl ring-1 ring-border/70 h-80 w-full object-cover" />
+            
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             {governance.map((g, i) => (
