@@ -104,6 +104,26 @@ function Home() {
         </div>
       </section>
 
+      {/* B CORP CERTIFICATION */}
+      <section className="mx-auto max-w-7xl px-5 sm:px-8 py-20">
+        <div className="rounded-[2rem] border border-border/70 bg-card p-10 md:p-14 grid md:grid-cols-[auto_1fr] gap-10 md:gap-14 items-center">
+          <div className="flex justify-center md:justify-start">
+            <img
+              src={bcorpLogo}
+              alt="Certified B Corporation"
+              loading="lazy"
+              className="h-40 md:h-48 w-auto dark:invert"
+            />
+          </div>
+          <div>
+            <span className="pill">Independently verified</span>
+            <p className="mt-6 font-serif text-2xl md:text-3xl leading-snug">
+              Each Honourable Merchant is audited and verified by an independent certification body operating globally that is <span className="italic-gold">B Corp certified.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* HOW IT WORKS */}
       <section id="how" className="mx-auto max-w-7xl px-5 sm:px-8 py-24">
         <div className="text-center">
