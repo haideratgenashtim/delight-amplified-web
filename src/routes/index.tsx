@@ -112,7 +112,7 @@ function Home() {
               src={bcorpLogo}
               alt="Certified B Corporation"
               loading="lazy"
-              className="h-[256px] md:h-[512px] w-auto max-w-full dark:invert"
+              className="h-32 md:h-[256px] w-auto max-w-full dark:invert"
             />
           </div>
           <div>
