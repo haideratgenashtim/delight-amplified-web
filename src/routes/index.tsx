@@ -35,7 +35,7 @@ import benefit2 from "@/assets/benefit-2.jpg";
 import benefit3 from "@/assets/benefit-3.jpg";
 import benefit4 from "@/assets/benefit-4.jpg";
 import governance1 from "@/assets/governance-1.jpg";
-import bcorpLogo from "@/assets/bcorp-logo.png";
+import bcorpLogo from "@/assets/tocert-bcorp-logo.png";
 
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import scanVideo from "@/assets/scan-video.mp4.asset.json";
@@ -106,16 +106,14 @@ function Home() {
 
       {/* B CORP CERTIFICATION */}
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-20">
-        <div className="rounded-[2rem] border border-border/70 bg-card p-10 md:p-14 grid md:grid-cols-[auto_1fr] gap-10 md:gap-14 items-center">
-          <div className="flex justify-center md:justify-start">
-            <img
-              src={bcorpLogo}
-              alt="Certified B Corporation"
-              loading="lazy"
-              className="h-32 md:h-[256px] w-auto max-w-full dark:invert"
-            />
-          </div>
-          <div>
+        <div className="rounded-[2rem] border border-border/70 bg-card p-8 md:p-14 flex flex-col items-center gap-8 md:gap-12 text-center">
+          <img
+            src={bcorpLogo}
+            alt="To-Cert — Certified B Corporation"
+            loading="lazy"
+            className="w-full max-w-3xl h-auto dark:invert"
+          />
+          <div className="max-w-3xl">
             <span className="pill">Independently verified</span>
             <p className="mt-6 font-serif text-2xl md:text-3xl leading-snug">
               Each Honourable Merchant is audited and verified by an independent certification body operating globally that is <span className="italic-gold">B Corp certified.</span>
