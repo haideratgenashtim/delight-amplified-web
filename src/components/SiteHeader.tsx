@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/sheet";
 
 const menuLinks = [
-  { label: "Our Story", href: "/#story" },
+  { label: "Our Story", href: "/our-story" },
   { label: "Find Merchant", href: "/#find" },
   { label: "Offers", href: "/#offers" },
   { label: "Redemption", href: "/#redemption" },
