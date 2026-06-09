@@ -23,6 +23,12 @@ import {
   Scale,
   Eye,
 } from "lucide-react";
+import merchantBoutique from "@/assets/merchant-boutique.jpg";
+import merchantFlorist from "@/assets/merchant-florist.jpg";
+import merchantCafe from "@/assets/merchant-cafe.jpg";
+import merchantArtisan from "@/assets/merchant-artisan.jpg";
+import merchantGrocer from "@/assets/merchant-grocer.jpg";
+import merchantBaker from "@/assets/merchant-baker.jpg";
 
 export const Route = createFileRoute("/merchant")({
   head: () => ({
@@ -204,17 +210,72 @@ function MerchantPage() {
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border/60">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-gold/10 via-background to-background" />
-        <div className="mx-auto max-w-5xl px-5 sm:px-8 pt-20 pb-16 text-center">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8 pt-16 pb-12 grid lg:grid-cols-2 gap-10 items-center">
+          <div className="text-center lg:text-left">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-1.5 text-xs tracking-[0.22em] uppercase text-gold">
+              Merchants
+            </span>
+            <h1 className="mt-6 font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">
+              Earn the Honourable Merchant mark.
+            </h1>
+            <p className="mt-5 text-muted-foreground text-lg max-w-xl mx-auto lg:mx-0">
+              A transparent path to certification — verified by independent
+              reviewers, recognised by conscious shoppers.
+            </p>
+          </div>
+          <div className="relative">
+            <div className="absolute -inset-3 rounded-3xl bg-gold/15 blur-2xl -z-10" />
+            <img
+              src={merchantBoutique}
+              alt="Joyful boutique owners laughing together inside a sustainable clothing store"
+              width={1600}
+              height={896}
+              className="w-full h-auto rounded-3xl object-cover ring-1 ring-gold/30 shadow-xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* MERCHANT GALLERY */}
+      <section className="mx-auto max-w-7xl px-5 sm:px-8 py-14 sm:py-16">
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-1.5 text-xs tracking-[0.22em] uppercase text-gold">
-            Merchants
+            Our Merchants
           </span>
-          <h1 className="mt-6 font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">
-            Earn the Honourable Merchant mark.
-          </h1>
-          <p className="mt-5 text-muted-foreground text-lg max-w-2xl mx-auto">
-            A transparent path to certification — verified by independent
-            reviewers, recognised by conscious shoppers.
+          <h2 className="mt-5 font-serif text-3xl sm:text-4xl">
+            Real businesses, real impact
+          </h2>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            From florists and bakers to artisans and grocers — meet the
+            people behind the mark.
           </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {[
+            { src: merchantFlorist, alt: "Smiling florist in her sustainable flower shop", label: "Florist" },
+            { src: merchantCafe, alt: "Happy barista at an ethical coffee shop", label: "Café" },
+            { src: merchantArtisan, alt: "Joyful woodworking artisan in workshop", label: "Artisan" },
+            { src: merchantGrocer, alt: "Organic grocer smiling at farmers market", label: "Grocer" },
+            { src: merchantBaker, alt: "Smiling baker holding fresh artisan bread", label: "Baker" },
+          ].map((m) => (
+            <figure
+              key={m.label}
+              className="group relative overflow-hidden rounded-2xl ring-1 ring-border/70 hover:ring-gold/50 transition"
+            >
+              <img
+                src={m.src}
+                alt={m.alt}
+                width={1280}
+                height={896}
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+              <figcaption className="absolute bottom-3 left-4 text-sm font-serif text-foreground">
+                {m.label}
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
@@ -286,6 +347,33 @@ function MerchantPage() {
             </AccordionItem>
           ))}
         </Accordion>
+      </section>
+
+      {/* BANNER */}
+      <section className="relative border-y border-border/60 overflow-hidden">
+        <img
+          src={merchantGrocer}
+          alt="Smiling organic grocer at a market stall full of fresh produce"
+          width={1280}
+          height={896}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20" />
+        <div className="relative mx-auto max-w-6xl px-5 sm:px-8 py-20 sm:py-28">
+          <div className="max-w-xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-1.5 text-xs tracking-[0.22em] uppercase text-gold bg-background/60 backdrop-blur">
+              Stories of impact
+            </span>
+            <h2 className="mt-5 font-serif text-3xl sm:text-4xl">
+              Built on trust. Verified by people.
+            </h2>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Every certified merchant is a real business doing the work — for
+              their team, their community, and the planet.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* ASSESSMENT / IMPACT AREAS */}
