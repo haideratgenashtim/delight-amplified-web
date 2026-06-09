@@ -23,6 +23,12 @@ import {
   Scale,
   Eye,
 } from "lucide-react";
+import merchantBoutique from "@/assets/merchant-boutique.jpg";
+import merchantFlorist from "@/assets/merchant-florist.jpg";
+import merchantCafe from "@/assets/merchant-cafe.jpg";
+import merchantArtisan from "@/assets/merchant-artisan.jpg";
+import merchantGrocer from "@/assets/merchant-grocer.jpg";
+import merchantBaker from "@/assets/merchant-baker.jpg";
 
 export const Route = createFileRoute("/merchant")({
   head: () => ({
