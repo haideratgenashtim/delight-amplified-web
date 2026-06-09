@@ -120,6 +120,35 @@ function Home() {
         </div>
       </section>
 
+      {/* HIGHLIGHTS */}
+      <section className="mx-auto max-w-7xl px-5 sm:px-8 py-20">
+        <div className="text-center">
+          <span className="pill">Why join</span>
+          <h2 className="mt-6 font-serif text-4xl md:text-5xl">
+            Rewards that <span className="italic-gold">ripple outward.</span>
+          </h2>
+          <p className="mt-4 mx-auto max-w-2xl text-muted-foreground">
+            A loyalty loop designed for shoppers, merchants, and the planet — all at once.
+          </p>
+        </div>
+        <ul className="mt-12 grid md:grid-cols-2 gap-5">
+          {[
+            { icon: Star, body: "Shoppers score exciting loyalty points every single time they pay using our app at participating stores." },
+            { icon: Sparkles, body: "Unlock instant discounts on your next purchase or convert your points into digital Honourable Merchant tokens." },
+            { icon: Gift, body: "Redeem your tokens instantly across our entire network of amazing, eco-conscious shops and retailers." },
+            { icon: Users, body: "Store owners attract a passionate crowd of new customers who eagerly support your sustainable mission." },
+            { icon: Heart, body: "Join us today to supercharge your business, maximize your savings, and champion a greener future together!" },
+          ].map((item, i) => (
+            <li key={i} className="flex gap-4 rounded-3xl border border-border/70 bg-card p-6 hover:border-gold/60 transition">
+              <div className="shrink-0 h-11 w-11 rounded-full bg-gold/12 text-gold flex items-center justify-center">
+                <item.icon className="h-5 w-5" />
+              </div>
+              <p className="text-base leading-relaxed text-foreground/90">{item.body}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       {/* HOW IT WORKS */}
       <section id="how" className="mx-auto max-w-7xl px-5 sm:px-8 py-24">
         <div className="text-center">
