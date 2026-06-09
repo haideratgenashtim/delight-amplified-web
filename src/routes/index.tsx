@@ -81,7 +81,7 @@ function Home() {
             <span className="italic-gold">Create Impact.</span>
           </h1>
           <p className="mt-7 mx-auto max-w-2xl text-lg text-muted-foreground">
-            The Honourable Merchant is a mark of trust that certain standards are met for how people are treated and the environment is considered. 
+            Welcome to the Honourable Merchants Program, where sustainable shopping pays off for everyone!
           </p>
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
