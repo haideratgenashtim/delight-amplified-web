@@ -44,7 +44,7 @@ import communityVideo from "@/assets/community-video.mp4.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Honourable Merchant — Make every purchase count." },
+      { title: "Honourable Merchant — Shop Smart. Earn Rewards. Create Impact." },
       { name: "description", content: "Discover honourable shops near you. Scan to verify. Earn points and tokens with every visit. A community-owned standard for trade done with care." },
       { property: "og:title", content: "Honourable Merchant" },
       { property: "og:description", content: "SHOP WITH CONFIDENCE." },
@@ -75,10 +75,10 @@ function Home() {
 
         <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-16 pb-10 text-center">
           <span className="pill"><Sparkles className="h-3.5 w-3.5" /> SHOP WITH CONFIDENCE.</span>
-          <h1 className="mt-8 font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] leading-[1.02] font-medium">
-            Make every
-            <br className="hidden sm:block" />{" "}
-            <span className="italic-gold">purchase count.</span>
+          <h1 className="mt-8 font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] leading-[1.02] font-medium whitespace-pre-line">
+            Shop Smart.{"\n"}
+            Earn Rewards.{"\n"}
+            <span className="italic-gold">Create Impact.</span>
           </h1>
           <p className="mt-7 mx-auto max-w-2xl text-lg text-muted-foreground">
             The Honourable Merchant is a mark of trust that certain standards are met for how people are treated and the environment is considered. 
