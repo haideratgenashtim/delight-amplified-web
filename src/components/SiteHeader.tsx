@@ -39,6 +39,13 @@ export function SiteHeader() {
           >
             Shopper
           </Link>
+          <Link
+            to="/merchant"
+            className="hover:text-gold transition"
+            activeProps={{ className: "text-gold" }}
+          >
+            Merchant
+          </Link>
         </nav>
         <div className="flex items-center gap-3">
           <button className="btn-ghost hidden sm:inline-flex">
@@ -74,6 +81,13 @@ export function SiteHeader() {
                   className="px-3 py-3 rounded-lg text-base hover:bg-accent hover:text-gold transition md:hidden"
                 >
                   Shopper
+                </Link>
+                <Link
+                  to="/merchant"
+                  onClick={() => setOpen(false)}
+                  className="px-3 py-3 rounded-lg text-base hover:bg-accent hover:text-gold transition md:hidden"
+                >
+                  Merchant
                 </Link>
               </nav>
             </SheetContent>

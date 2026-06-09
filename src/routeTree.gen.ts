@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ShopperRouteImport } from './routes/shopper'
 import { Route as OurStoryRouteImport } from './routes/our-story'
+import { Route as MerchantRouteImport } from './routes/merchant'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ShopperRoute = ShopperRouteImport.update({
@@ -23,6 +24,11 @@ const OurStoryRoute = OurStoryRouteImport.update({
   path: '/our-story',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MerchantRoute = MerchantRouteImport.update({
+  id: '/merchant',
+  path: '/merchant',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +37,34 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/merchant': typeof MerchantRoute
   '/our-story': typeof OurStoryRoute
   '/shopper': typeof ShopperRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/merchant': typeof MerchantRoute
   '/our-story': typeof OurStoryRoute
   '/shopper': typeof ShopperRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/merchant': typeof MerchantRoute
   '/our-story': typeof OurStoryRoute
   '/shopper': typeof ShopperRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/our-story' | '/shopper'
+  fullPaths: '/' | '/merchant' | '/our-story' | '/shopper'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/our-story' | '/shopper'
-  id: '__root__' | '/' | '/our-story' | '/shopper'
+  to: '/' | '/merchant' | '/our-story' | '/shopper'
+  id: '__root__' | '/' | '/merchant' | '/our-story' | '/shopper'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  MerchantRoute: typeof MerchantRoute
   OurStoryRoute: typeof OurStoryRoute
   ShopperRoute: typeof ShopperRoute
 }
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurStoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/merchant': {
+      id: '/merchant'
+      path: '/merchant'
+      fullPath: '/merchant'
+      preLoaderRoute: typeof MerchantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,9 +104,20 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  MerchantRoute: MerchantRoute,
   OurStoryRoute: OurStoryRoute,
   ShopperRoute: ShopperRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
