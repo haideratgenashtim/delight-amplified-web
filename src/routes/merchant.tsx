@@ -349,6 +349,33 @@ function MerchantPage() {
         </Accordion>
       </section>
 
+      {/* BANNER */}
+      <section className="relative border-y border-border/60 overflow-hidden">
+        <img
+          src={merchantGrocer}
+          alt="Smiling organic grocer at a market stall full of fresh produce"
+          width={1280}
+          height={896}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20" />
+        <div className="relative mx-auto max-w-6xl px-5 sm:px-8 py-20 sm:py-28">
+          <div className="max-w-xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-1.5 text-xs tracking-[0.22em] uppercase text-gold bg-background/60 backdrop-blur">
+              Stories of impact
+            </span>
+            <h2 className="mt-5 font-serif text-3xl sm:text-4xl">
+              Built on trust. Verified by people.
+            </h2>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Every certified merchant is a real business doing the work — for
+              their team, their community, and the planet.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ASSESSMENT / IMPACT AREAS */}
       <section className="border-t border-border/60 bg-card/20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-20">
