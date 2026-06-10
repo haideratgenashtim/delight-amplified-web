@@ -176,7 +176,8 @@ function Home() {
           <FlowCard
             tag="For merchants"
             title="Join. Onboard. Grow."
-            href="See merchant benefits"
+            href="Explore Merchant Page"
+            to="/merchant"
             image={upOurStory}
             steps={[
               { icon: Heart, title: "Apply with heart", body: "Tell us what makes your business honourable." },
