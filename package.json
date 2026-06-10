@@ -3,6 +3,9 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "overrides": {
+    "@rolldown/binding-wasm32-wasi": "^1.1.0"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
