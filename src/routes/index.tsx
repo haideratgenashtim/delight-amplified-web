@@ -346,7 +346,7 @@ function FlowCard({
       <div className="relative h-56">
         <img src={image} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
-        <span className="absolute top-5 left-5 pill bg-background/80">{tag}</span>
+        <span className="absolute top-5 left-5 pill !bg-background/60 backdrop-blur-md text-foreground">{tag}</span>
       </div>
       <div className="p-7 md:p-9">
         <h3 className="font-serif text-3xl">{title}</h3>
