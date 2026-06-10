@@ -337,9 +337,9 @@ function Home() {
 }
 
 function FlowCard({
-  tag, title, steps, href, image, footnote,
+  tag, title, steps, href, to, image, footnote,
 }: {
-  tag: string; title: string; href: string; image: string; footnote?: string;
+  tag: string; title: string; href: string; to?: string; image: string; footnote?: string;
   steps: { icon: React.ComponentType<{ className?: string }>; title: string; body: string }[];
 }) {
   return (
@@ -367,7 +367,11 @@ function FlowCard({
           ))}
         </ol>
         <div className="mt-7 flex items-center justify-between gap-4">
-          <a href="#" className="btn-ghost">{href} <ArrowRight className="h-4 w-4" /></a>
+          {to ? (
+            <Link to={to} className="btn-ghost">{href} <ArrowRight className="h-4 w-4" /></Link>
+          ) : (
+            <a href="#" className="btn-ghost">{href} <ArrowRight className="h-4 w-4" /></a>
+          )}
           {footnote && <span className="text-xs text-muted-foreground">{footnote}</span>}
         </div>
       </div>
