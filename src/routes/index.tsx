@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight, MapPin, PlayCircle, ShieldCheck, Heart, Star,
   QrCode, Coins, Gift, Sparkles, Users, BadgeCheck, Smartphone,
@@ -164,7 +164,8 @@ function Home() {
           <FlowCard
             tag="For shoppers"
             title="Scan. Earn. Redeem."
-            href="Explore the shopper app"
+            href="Explore Shopper Page"
+            to="/shopper"
             image={upShoppers2}
             steps={[
               { icon: QrCode, title: "Scan the seal", body: "Verify a merchant's certification with a single tap." },
@@ -336,9 +337,9 @@ function Home() {
 }
 
 function FlowCard({
-  tag, title, steps, href, image, footnote,
+  tag, title, steps, href, to, image, footnote,
 }: {
-  tag: string; title: string; href: string; image: string; footnote?: string;
+  tag: string; title: string; href: string; to?: string; image: string; footnote?: string;
   steps: { icon: React.ComponentType<{ className?: string }>; title: string; body: string }[];
 }) {
   return (
@@ -366,7 +367,11 @@ function FlowCard({
           ))}
         </ol>
         <div className="mt-7 flex items-center justify-between gap-4">
-          <a href="#" className="btn-ghost">{href} <ArrowRight className="h-4 w-4" /></a>
+          {to ? (
+            <Link to={to} className="btn-ghost">{href} <ArrowRight className="h-4 w-4" /></Link>
+          ) : (
+            <a href="#" className="btn-ghost">{href} <ArrowRight className="h-4 w-4" /></a>
+          )}
           {footnote && <span className="text-xs text-muted-foreground">{footnote}</span>}
         </div>
       </div>
