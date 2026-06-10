@@ -164,7 +164,8 @@ function Home() {
           <FlowCard
             tag="For shoppers"
             title="Scan. Earn. Redeem."
-            href="Explore the shopper app"
+            href="Explore Shopper Page"
+            to="/shopper"
             image={upShoppers2}
             steps={[
               { icon: QrCode, title: "Scan the seal", body: "Verify a merchant's certification with a single tap." },
