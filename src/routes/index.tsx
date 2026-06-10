@@ -112,7 +112,7 @@ function Home() {
             src={bcorpLogo}
             alt="To-Cert — Certified B Corporation"
             loading="lazy"
-            className="w-full max-w-[180px] h-auto dark:invert"
+            className="w-full max-w-sm h-auto dark:invert"
           />
           <p className="max-w-3xl font-serif text-2xl md:text-3xl leading-snug">
             Each Honourable Merchant is audited and verified by an independent certification body operating globally that is <span className="italic-gold">B Corp certified.</span>
