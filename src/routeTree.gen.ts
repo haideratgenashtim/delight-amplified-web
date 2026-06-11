@@ -12,6 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ShopperRouteImport } from './routes/shopper'
 import { Route as OurStoryRouteImport } from './routes/our-story'
 import { Route as MerchantRouteImport } from './routes/merchant'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as CouncilOfStewardsRouteImport } from './routes/council-of-stewards'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CertificationBodyRouteImport } from './routes/certification-body'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ShopperRoute = ShopperRouteImport.update({
@@ -29,6 +33,26 @@ const MerchantRoute = MerchantRouteImport.update({
   path: '/merchant',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CouncilOfStewardsRoute = CouncilOfStewardsRouteImport.update({
+  id: '/council-of-stewards',
+  path: '/council-of-stewards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificationBodyRoute = CertificationBodyRouteImport.update({
+  id: '/certification-body',
+  path: '/certification-body',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,12 +61,20 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/certification-body': typeof CertificationBodyRoute
+  '/contact': typeof ContactRoute
+  '/council-of-stewards': typeof CouncilOfStewardsRoute
+  '/faq': typeof FaqRoute
   '/merchant': typeof MerchantRoute
   '/our-story': typeof OurStoryRoute
   '/shopper': typeof ShopperRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/certification-body': typeof CertificationBodyRoute
+  '/contact': typeof ContactRoute
+  '/council-of-stewards': typeof CouncilOfStewardsRoute
+  '/faq': typeof FaqRoute
   '/merchant': typeof MerchantRoute
   '/our-story': typeof OurStoryRoute
   '/shopper': typeof ShopperRoute
@@ -50,20 +82,53 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/certification-body': typeof CertificationBodyRoute
+  '/contact': typeof ContactRoute
+  '/council-of-stewards': typeof CouncilOfStewardsRoute
+  '/faq': typeof FaqRoute
   '/merchant': typeof MerchantRoute
   '/our-story': typeof OurStoryRoute
   '/shopper': typeof ShopperRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/merchant' | '/our-story' | '/shopper'
+  fullPaths:
+    | '/'
+    | '/certification-body'
+    | '/contact'
+    | '/council-of-stewards'
+    | '/faq'
+    | '/merchant'
+    | '/our-story'
+    | '/shopper'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/merchant' | '/our-story' | '/shopper'
-  id: '__root__' | '/' | '/merchant' | '/our-story' | '/shopper'
+  to:
+    | '/'
+    | '/certification-body'
+    | '/contact'
+    | '/council-of-stewards'
+    | '/faq'
+    | '/merchant'
+    | '/our-story'
+    | '/shopper'
+  id:
+    | '__root__'
+    | '/'
+    | '/certification-body'
+    | '/contact'
+    | '/council-of-stewards'
+    | '/faq'
+    | '/merchant'
+    | '/our-story'
+    | '/shopper'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CertificationBodyRoute: typeof CertificationBodyRoute
+  ContactRoute: typeof ContactRoute
+  CouncilOfStewardsRoute: typeof CouncilOfStewardsRoute
+  FaqRoute: typeof FaqRoute
   MerchantRoute: typeof MerchantRoute
   OurStoryRoute: typeof OurStoryRoute
   ShopperRoute: typeof ShopperRoute
@@ -92,6 +157,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MerchantRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/council-of-stewards': {
+      id: '/council-of-stewards'
+      path: '/council-of-stewards'
+      fullPath: '/council-of-stewards'
+      preLoaderRoute: typeof CouncilOfStewardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certification-body': {
+      id: '/certification-body'
+      path: '/certification-body'
+      fullPath: '/certification-body'
+      preLoaderRoute: typeof CertificationBodyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -104,6 +197,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CertificationBodyRoute: CertificationBodyRoute,
+  ContactRoute: ContactRoute,
+  CouncilOfStewardsRoute: CouncilOfStewardsRoute,
+  FaqRoute: FaqRoute,
   MerchantRoute: MerchantRoute,
   OurStoryRoute: OurStoryRoute,
   ShopperRoute: ShopperRoute,
@@ -111,13 +208,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
