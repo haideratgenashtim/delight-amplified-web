@@ -80,6 +80,9 @@ function Home() {
             Earn Rewards.{"\n"}
             <span className="italic-gold">Create Impact.</span>
           </h1>
+          <h2 className="mt-6 font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-gold">
+            You Own the Honourable Merchants
+          </h2>
           <p className="mt-7 mx-auto max-w-2xl text-lg text-muted-foreground">
             Welcome to the Honourable Merchants Program, where sustainable shopping pays off for everyone!
           </p>
