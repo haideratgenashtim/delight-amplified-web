@@ -11,7 +11,7 @@ export function SiteFooter() {
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-sm">
             A community-owned standard for trade done with care.
-            Certified by TO-Cert. Held in common by the people it serves.
+            Certified by To-Cert. Held in common by the people it serves.
           </p>
         </div>
         <div>
@@ -36,7 +36,7 @@ export function SiteFooter() {
       <div className="border-t border-border/60">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-6 flex flex-wrap items-center justify-between gap-3 text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} Honourable Merchant. Owned by its community.</div>
-          <div className="tracking-[0.18em] uppercase">Certified by TO-Cert</div>
+          <div className="tracking-[0.18em] uppercase">Certified by To-Cert</div>
         </div>
       </div>
     </footer>
