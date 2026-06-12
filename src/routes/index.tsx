@@ -248,10 +248,6 @@ function Home() {
               <a href="#cta" className="btn-gold"><QrCode className="h-4 w-4" /> Try the scan experience</a>
               <a href="#wallet" className="btn-ghost"><Wallet /> See your wallet</a>
             </div>
-            <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-border px-5 py-2.5 text-sm">
-              <span className="text-muted-foreground">Verified in</span>
-              <span className="font-serif text-2xl text-gold">0.4s</span>
-            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3">
