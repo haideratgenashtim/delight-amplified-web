@@ -23,7 +23,7 @@ import {
   Scale,
   Eye,
 } from "lucide-react";
-import merchantBoutique from "@/assets/merchant-boutique.jpg";
+import merchantBoutique from "@/assets/merchant-hero-cafe.jpg.asset.json";
 import merchantFlorist from "@/assets/merchant-florist.jpg";
 import merchantCafe from "@/assets/merchant-cafe.jpg";
 import merchantArtisan from "@/assets/merchant-artisan.jpg";
@@ -226,8 +226,8 @@ function MerchantPage() {
           <div className="relative">
             <div className="absolute -inset-3 rounded-3xl bg-gold/15 blur-2xl -z-10" />
             <img
-              src={merchantBoutique}
-              alt="Joyful boutique owners laughing together inside a sustainable clothing store"
+              src={merchantBoutique.url}
+              alt="Two young café owners smiling behind the counter of their shop"
               width={1600}
               height={896}
               className="w-full h-auto rounded-3xl object-cover ring-1 ring-gold/30 shadow-xl"
