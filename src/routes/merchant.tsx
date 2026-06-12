@@ -96,7 +96,7 @@ const steps: Step[] = [
     step: "Step 5",
     title: "Independent verification and review",
     description:
-      "Your application is assigned to an analyst from our independent verification team, who reviews it for accuracy and consistency between your responses and the submitted evidence. You will be kept informed of the verification notes, outcomes, and the expected turnaround time throughout the process.",
+      "The application will then be assigned to an analyst (part of an independent verification team) for review and verification. Verification will take no longer than two (2) weeks, ensuring accuracy and consistency between responses and submitted evidence.",
     Icon: ShieldCheck,
   },
   {
