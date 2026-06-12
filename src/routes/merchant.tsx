@@ -288,7 +288,7 @@ function MerchantPage() {
             </span>
             <div>
               <div className="text-xs tracking-[0.22em] uppercase text-gold">
-                I. Qualifying Score
+                QUALIFYING SCORE
               </div>
               <h2 className="mt-2 font-serif text-2xl sm:text-3xl">
                 A verified score of 80 points or above.
@@ -308,7 +308,7 @@ function MerchantPage() {
       <section className="mx-auto max-w-4xl px-5 sm:px-8 pb-16 sm:pb-20">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-1.5 text-xs tracking-[0.22em] uppercase text-gold">
-            II. The Certification Process
+            THE CERTIFICATION PROCESS
           </span>
           <h2 className="mt-5 font-serif text-3xl sm:text-4xl">
             Six steps from assessment to certified status
